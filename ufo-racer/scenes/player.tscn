@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfdw1v0bw3igs"]
+
+[ext_resource type="Texture2D" uid="uid://1by5lgikw0wr" path="res://assets/player/vehicle.png" id="1_ghbym"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_qd22l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_krcry"]
+radius = 59.0085
+
+[node name="Player" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_qd22l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_ghbym")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_krcry")
